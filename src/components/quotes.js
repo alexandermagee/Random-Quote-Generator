@@ -9,10 +9,7 @@ export const quotes = {
   get randomQuote () {
     const authors = Object.keys(this.quotes);
     let randomIndex = authors[Math.floor(Math.random()*authors.length)];
-    return {
-      author: randomIndex,
-      text: this.quotes[randomIndex]
-    }
+    return [randomIndex, this.quotes[randomIndex]]
   }
 }
 

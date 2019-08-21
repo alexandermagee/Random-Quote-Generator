@@ -14,7 +14,7 @@ export class GeneratedQuote extends React.Component {
         return (
         <div>
         <article id="text">
-          {this.props.text}
+         <span id="quotationMarks">❛❛</span> {this.props.text}
         </article>
         <aside id="author">
             - {this.props.author}       

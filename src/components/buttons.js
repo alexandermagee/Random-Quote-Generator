@@ -8,9 +8,11 @@ export class Buttons extends React.Component {
      }
  
      handleClick() {
-         let randomQuote = "Live and Let Die";
-         let randomQuoteAuthor = "Paul McCartney";
-         this.props.updateQuote(randomQuote,randomQuoteAuthor);
+         /* returns an array from the get randomiser method on quotes - z-index [] used to access the returned array */
+         let generatedRandomQuote = quotes.randomQuote;
+         let randomQuoteText = generatedRandomQuote[1];
+         let randomQuoteAuthor = generatedRandomQuote[0];
+         this.props.updateQuote(randomQuoteText,randomQuoteAuthor);
      }
  
      render() {
