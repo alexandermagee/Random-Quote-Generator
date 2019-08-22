@@ -13,15 +13,17 @@ export class Buttons extends React.Component {
          let randomQuoteText = generatedRandomQuote[1];
          let randomQuoteAuthor = generatedRandomQuote[0];
          this.props.updateQuote(randomQuoteText,randomQuoteAuthor);
+         /*call to toggle class */
+         this.props.randomColour();
      }
  
      render() {
         return (<section id="buttons">
         <div>
-          <button id="tweet-quote">Tw</button>
-          <button>Tu</button>
+          <button id="tweet-quote" class={this.props.classTitle}>Tw</button>
+          <button id="tumblr-quote" class={this.props.classTitle}>Tu</button>
         </div>
-        <button id="new-quote" onClick={this.handleClick}>New quote</button>
+        <button id="new-quote" class={this.props.classTitle} onClick={this.handleClick}>New quote</button>
       </section>
         )  
      }
